@@ -1,0 +1,32 @@
+package com.ratna.boot.batch.csvtomongodb;
+
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.Step;
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
+import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@EnableBatchProcessing
+@Configuration
+public class CsvToMongoJob {
+
+	@Autowired
+	private JobBuilderFactory jobBuilderFactory;
+	@Autowired
+	private StepBuilderFactory stepBuilderFactory;
+
+	@Bean
+	public Job readCsvFile() {
+		return jobBuilderFactory.get("readCsvFile").incrementer(new RunIdIncrementer()).start(step1()).build();
+	}
+
+	private Step step1() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

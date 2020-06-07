@@ -1,0 +1,9 @@
+package com.ratna.boot.batch.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.ratna.boot.batch.model.Domain;
+
+public interface DomainRepository extends MongoRepository<Domain, Integer>{
+
+}

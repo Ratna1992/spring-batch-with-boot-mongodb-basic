@@ -1,0 +1,47 @@
+package com.ratna.boot.batch.csvtomongodb;
+
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobExecutionListener;
+import org.springframework.batch.core.Step;
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
+import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.ratna.boot.batch.itemprocessor.BatchCsvProcessor;
+import com.ratna.boot.batch.itemreader.BatchCsvReader;
+import com.ratna.boot.batch.itemwriter.BatchCsvWriter;
+import com.ratna.boot.batch.joblistener.CsvJobCompletionListener;
+import com.ratna.boot.batch.model.Domain;
+
+@EnableBatchProcessing
+@Configuration
+public class CsvToMongoJob {
+
+	@Autowired
+	private JobBuilderFactory jobBuilderFactory;
+	@Autowired
+	private StepBuilderFactory stepBuilderFactory;
+
+	// starts the step
+	@Bean
+	public Job readCsvFile() {
+		return jobBuilderFactory.get("readCsvFile").incrementer(new RunIdIncrementer()).start(step1()).build();
+	}
+
+	// starts the proces
+	private Step step1() {
+		return stepBuilderFactory.get("step1").<Domain, Domain>chunk(10).reader(new BatchCsvReader())
+				.processor(new BatchCsvProcessor()).writer(new BatchCsvWriter()).build();
+	}
+	
+	//gets the listener
+	@Bean
+	public JobExecutionListener listener() {
+		return new CsvJobCompletionListener();
+	}
+
+}

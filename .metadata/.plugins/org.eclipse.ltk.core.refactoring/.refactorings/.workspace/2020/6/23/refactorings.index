@@ -1,0 +1,6 @@
+1591447853792	Delete resource 'spring-boot-batch/src/main/java/com/ratna/boot/batch/itemwriter/BatchCSVWriter.java'
+1591448026698	Delete resource 'spring-boot-batch/src/main/java/com/ratna/boot/batch/csvtomongodb'
+1591448038642	Delete resource 'spring-boot-batch/src/main/java/com/ratna/boot/batch/joblistener/CsvJobCompletionListener.java'
+1591448046129	Delete resource 'spring-boot-batch/src/main/java/com/ratna/boot/batch/model'
+1591448051359	Delete resource 'spring-boot-batch/src/main/java/com/ratna/boot/batch/repository'
+1591452082311	Delete resource 'spring-boot-batch-mongo-db/src/main/java/com/ratna/boot/batch/controller'

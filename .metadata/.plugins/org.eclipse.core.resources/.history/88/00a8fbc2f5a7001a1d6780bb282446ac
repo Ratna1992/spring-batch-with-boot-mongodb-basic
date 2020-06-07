@@ -1,0 +1,5 @@
+package com.ratna.boot.batch.mongo.repository;
+
+public class DomainRepository {
+
+}

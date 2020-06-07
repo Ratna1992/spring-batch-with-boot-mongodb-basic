@@ -1,0 +1,7 @@
+package com.ratna.boot.batch.itemprocessor;
+
+import org.springframework.batch.item.ItemProcessor;
+
+public class BatchItemProcessor implements ItemProcessor<String, String> {
+
+}

@@ -1,0 +1,17 @@
+package com.ratna.boot.batch.itemprocessor;
+
+import org.springframework.batch.item.ItemProcessor;
+
+import com.ratna.boot.batch.model.Domain;
+
+public class BatchCsvProcessor implements ItemProcessor<Domain, Domain> {
+
+	@Override
+	public Domain process(Domain item) throws Exception {
+		if (item.getName().equalsIgnoreCase("NA")) {
+			item.setName("Yet to Update");
+		}
+		return item;
+	}
+
+}

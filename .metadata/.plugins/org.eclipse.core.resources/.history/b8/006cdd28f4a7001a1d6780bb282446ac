@@ -1,0 +1,19 @@
+package com.ratna.boot.batch;
+
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+
+import com.ratna.boot.batch.repository.DomainRepository;
+
+@SpringBootApplication
+@EnableBatchProcessing
+@EnableMongoRepositories(basePackageClasses = DomainRepository.class)
+public class SpringBootBatchApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootBatchApplication.class, args);
+	}
+
+}

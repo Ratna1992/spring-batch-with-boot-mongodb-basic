@@ -1,0 +1,13 @@
+
+™
+java:S1128"bRemove this unused import 'org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper'.(½“„Ûøÿÿÿÿ8¦„­Ê¨.HdRMINORZ
+CODE_SMELL
+“
+java:S1128"aRemove this unused import 'org.springframework.batch.item.file.transform.DelimitedLineTokenizer'.(›÷œÜ8¦„­Ê¨.HeRMINORZ
+CODE_SMELL
+
+java:S1128"JRemove this unused import 'org.springframework.core.io.ClassPathResource'.(İ¹º§ıÿÿÿÿ8¦„­Ê¨.HfRMINORZ
+CODE_SMELL
+Œ
+java:S1128"ZRemove this unused import 'org.springframework.batch.item.file.mapping.DefaultLineMapper'.(Äˆ‚È8¦„­Ê¨.HgRMINORZ
+CODE_SMELL

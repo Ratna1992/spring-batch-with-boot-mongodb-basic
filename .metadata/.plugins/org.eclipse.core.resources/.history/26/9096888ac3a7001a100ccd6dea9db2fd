@@ -1,0 +1,5 @@
+package com.ratna.boot.batch.config;
+
+public class BatchConfig {
+
+}

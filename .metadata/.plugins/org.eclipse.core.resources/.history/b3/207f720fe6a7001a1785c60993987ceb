@@ -1,0 +1,5 @@
+package com.ratna.boot.batch.repository;
+
+public class Domain {
+
+}

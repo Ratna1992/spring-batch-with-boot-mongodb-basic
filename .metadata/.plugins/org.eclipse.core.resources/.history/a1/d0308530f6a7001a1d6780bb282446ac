@@ -1,0 +1,8 @@
+package com.ratna.boot.batch.mongo.batchconfig;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class CSVBatchConfiguration {
+
+}

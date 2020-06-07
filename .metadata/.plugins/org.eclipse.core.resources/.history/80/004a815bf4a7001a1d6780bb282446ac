@@ -1,0 +1,22 @@
+package com.ratna.boot.batch.itemwriter;
+
+import java.util.List;
+
+import org.springframework.batch.item.ItemWriter;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ratna.boot.batch.model.Domain;
+import com.ratna.boot.batch.repository.DomainRepository;
+
+public class BatchCSVWriter implements ItemWriter<Domain> {
+
+	@Autowired
+	DomainRepository repo;
+
+	@Override
+	public void write(List<? extends Domain> items) throws Exception {
+		repo.saveAll(items);
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.ratna.boot.batch.itemreader;
+
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.batch.item.file.mapping.DefaultLineMapper;
+import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.stereotype.Service;
+
+import com.ratna.boot.batch.model.Domain;
+
+@Service
+public class BatchCsvReader {
+	public FlatFileItemReader<Domain> reader() {
+		FlatFileItemReader<Domain> reader = new FlatFileItemReader<>();
+		reader.setResource(new ClassPathResource("sample-data.csv"));
+		reader.setLineMapper(new DefaultLineMapper<Domain>() {
+			{
+				setLineTokenizer(new DelimitedLineTokenizer() {
+					{
+						setNames(new String[] { "id", "name" });
+					}
+				});
+			}
+		});
+
+	}
+}

@@ -1,0 +1,14 @@
+package com.ratna.boot.batch.itemreader;
+
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.stereotype.Service;
+
+import com.ratna.boot.batch.model.Domain;
+
+@Service
+public class BatchCsvReader {
+	public FlatFileItemReader<Domain> reader() {
+		FlatFileItemReader<Domain> reader = new FlatFileItemReader<>();
+
+	}
+}

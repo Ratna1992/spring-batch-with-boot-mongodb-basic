@@ -1,0 +1,12 @@
+package com.ratna.boot.batch.itemwriter;
+
+import org.springframework.batch.item.data.MongoItemWriter;
+import org.springframework.stereotype.Service;
+
+import com.ratna.boot.batch.model.Domain;
+
+@Service
+public class BatchCsvWriter extends MongoItemWriter<Domain> {
+	
+
+}

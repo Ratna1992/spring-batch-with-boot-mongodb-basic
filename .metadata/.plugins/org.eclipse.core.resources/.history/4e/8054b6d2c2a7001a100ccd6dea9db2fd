@@ -1,0 +1,5 @@
+package com.ratna.boot.batch.joblistener;
+
+public class JobCompletionListener {
+
+}

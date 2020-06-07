@@ -1,0 +1,20 @@
+package com.ratna.boot.batch.itemwriter;
+
+import org.springframework.batch.item.data.MongoItemWriter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+
+import com.ratna.boot.batch.model.Domain;
+
+public class BatchCsvWriter extends MongoItemWriter<Domain> {
+	@Autowired
+	MongoTemplate template;
+
+	MongoItemWriter<Domain> writer() {
+		MongoItemWriter<Domain> mongoWriter = new MongoItemWriter<Domain>();
+		mongoWriter.setTemplate(template);
+		mongoWriter.setCollection("domain");
+		return mongoWriter;
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.ratna.boot.batch.itemreader;
+
+import org.springframework.batch.item.ItemReader;
+import org.springframework.batch.item.NonTransientResourceException;
+import org.springframework.batch.item.ParseException;
+import org.springframework.batch.item.UnexpectedInputException;
+
+public class BatchItemReader implements ItemReader<String> {
+
+	private String[] msgs = { "Welcome to Spring Batch", "Hello World!" };
+
+	@Override
+	public String read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
+
+		for (String string : msgs) {
+			return string;
+		}
+		return null;
+	}
+
+}

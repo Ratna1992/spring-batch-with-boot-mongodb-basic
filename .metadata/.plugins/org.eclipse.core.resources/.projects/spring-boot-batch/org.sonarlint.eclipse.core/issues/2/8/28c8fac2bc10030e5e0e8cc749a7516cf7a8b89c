@@ -1,0 +1,10 @@
+
+È
+java:S1130"—Remove the declaration of thrown exception 'org.springframework.batch.item.NonTransientResourceException' which is a subclass of 'java.lang.Exception'.(áÖ§ûÿÿÿÿH@RMINORZ
+CODE_SMELL
+¹
+java:S1130"ˆRemove the declaration of thrown exception 'org.springframework.batch.item.ParseException' which is a subclass of 'java.lang.Exception'.(áÖ§ûÿÿÿÿHARMINORZ
+CODE_SMELL
+Ã
+java:S1130"’Remove the declaration of thrown exception 'org.springframework.batch.item.UnexpectedInputException' which is a subclass of 'java.lang.Exception'.(áÖ§ûÿÿÿÿHBRMINORZ
+CODE_SMELL

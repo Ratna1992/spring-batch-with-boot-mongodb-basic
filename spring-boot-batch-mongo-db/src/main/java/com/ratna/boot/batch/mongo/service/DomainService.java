@@ -7,4 +7,8 @@ import com.ratna.boot.batch.mongo.model.Domain;
 public interface DomainService {
 
 	List<Domain> getAllDomains();
+
+	String triggerJob();
+
+	String dropCollection(String name);
 }
